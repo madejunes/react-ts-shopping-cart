@@ -1,14 +1,19 @@
 import './Product.css'
 
-const Product: React.FC = (): JSX.Element => {
+interface ProductProps {
+  title: string;
+  image: string;
+}
+
+const Product: React.FC<ProductProps> = ({title, image}): JSX.Element => {
   return(
     <div className="product">
       <div className="product__thumbnail">
-        <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" />
+        <img src={image} alt={title} />
       </div>
 
       <h2 className="product__title">
-        Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops
+        {title}
       </h2>
     </div>
   )
