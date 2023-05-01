@@ -1,9 +1,14 @@
-interface ProductInterface {
+export interface ProductInterface {
   name: string;
   price: number;
   image: string;
 }
 
 export interface StateInterface {
-  products: ProductInterface[]
+  products: ProductInterface[];
+}
+
+export interface ActionInterface {
+  type: string;
+  payload: unknown;
 }
